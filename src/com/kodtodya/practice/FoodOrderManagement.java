@@ -19,6 +19,8 @@ public class FoodOrderManagement {
                     System.out.println("create customer call");
                     break;
 
+                default:
+                    System.out.println("invalid option");
             }
         } while(option != 0);
     }
