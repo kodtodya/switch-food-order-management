@@ -2,5 +2,9 @@
 
 ## How to run
 ```shell
-enter data
+echo "Hello world!"
 ```
+---
+### build steps
+
+> show me the code

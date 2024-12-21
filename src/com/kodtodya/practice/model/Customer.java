@@ -1,5 +1,7 @@
 package com.kodtodya.practice.model;
 
+import java.util.Objects;
+
 public class Customer {
     int id;
     String firstName;
@@ -46,5 +48,18 @@ public class Customer {
                 ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return id == customer.id && Objects.equals(firstName, customer.firstName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName);
     }
 }
